@@ -35,27 +35,34 @@ body {
   
   .container {
     margin-top: 80px;
-    margin-left: 350px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: #34495E;
     }
 
   .mydiv{
     display: inline-block;
     width:300px;
-    height: 350px;
+    height: 450px;
+    margin-left: 40px;
+    background-color: grey;
   }
   
   .mydiv1{
     display:inline-block;
     width:300px;
-    height: 350px;
+    height: 400px;
   }
   
   .mydiv2{
     display:inline-block;
     width:300px;
-    height: 350px;
+    height: 400px;
   }
-  
+  .hero{
+    margin-top: 30px;
+    
+  }
     
         
    
