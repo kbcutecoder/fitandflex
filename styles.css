@@ -1,69 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+:root
+{
+  --blue:#3498DB;
+  --darkblue:#34495E;  
+  --grey:#F0F3F4;
+  --darkgrey:#666666;
+  --orange:#F39C12;
+  --red:#FF3333;
+}
+
+* 
+{
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
 body {
     margin: 0;
     font-family: Roboto;
+    font-size: 16px;
     background-color: white;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    min-height: 100%;
+    overflow-x: hidden;
   }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #34495E;
-    color: white ;
-  }
-  
-  .logo img {
-    width: 250px;
-  height: 200px;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-  }
-  
-  .nav-links li {
-    list-style: none;
-  }
-  
-  .nav-links a {
-    color: white ;
-    text-decoration: none;
-    
-  }
-  
-  .container {
-    margin-top: 80px;
-    margin-left: 250px;
-    margin-right: 250px;
-    background-color: #34495E;
-    }
 
-  .mydiv{
-    display: inline-block;
-    width:300px;
-    height: 450px;
-    margin-left: 40px;
-    background-color: grey;
-  }
+.p-2 {padding: 15px;}
+
+.message-container
+{
+  background: var (--darkgrey);
+  padding: 20px;
+  border: 1px solid var(--darkblue);
+  display: block;
+  overflow: auto;
+}
+
+.message-container h2.arrow-left:after {
+  content: " ";
+  position: absolute;
+  left: -15px;
+  top: 15px;
+  border-top: 15px solid transparent;
+  border-right: 15px solid black;
+  border-left: none;
+  border-bottom: 15px solid transparent;
+}
+
+.box {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: var(--darkblue);
+  padding: 20px;
+  position: relative;
+  margin: 30px 10px;
+  float: left;
+}
+
+.box.arrow-left:after {
+  content: " ";
+  position: absolute;
+  left: -15px;
+  top: 15px;
+  border-top: 15px solid transparent;
+  border-right: 15px solid white;
+  border-left: none;
+  border-bottom: 15px solid transparent;
+}
+
+
+.bg-white {background-color: white;}
+h1,h2,h3,h4,h5,h6
+{
+font-family: 'Montserrat', sans-serif;
+}
+
+h1
+{ 
+  font-size:36px;
+}
+h2
+{ 
+  font-size:30px;
+}
+h3
+{ 
+  font-size:24px;
+}
+h4
+{ 
+  font-size:20px;
+}
+h5
+{ 
+  font-size:18px;
+}
+h5
+{ 
+  font-size:16px;
+}
+
+.fullheight
+{
+  min-height: 100vh;
+}
   
-  .mydiv1{
-    display:inline-block;
-    width:300px;
-    height: 400px;
-  }
+.logo img 
+{
+  width: 250px;
+  height: 200px;
+}
+
+
+.main
+{
+  background-color: var(--grey);
+}
   
-  .mydiv2{
-    display:inline-block;
-    width:300px;
-    height: 400px;
-  }
-  .hero{
-    margin-top: 30px;
-    
-  }
-    
+.navbar
+{
+  background-color: white;
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar i
+{
+  font-size: 36px;
+  padding: 5px;
+}
+
+.sidebar
+{
+  background-color: white;
+  padding: 10px;
+}
+
+input[type="text"]
+{
+  padding: 7px;
+  border-radius: 5%;
+}
+
+button
+{
+  width: 100%;
+  margin: 15px;
+  background-color: var(--grey);
+  border: 1px solid grey;
+  font-size: 20px;
+}
         
    
+@media only screen and (max-width: 992px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
   
+  .fullheight {min-height: auto;}
+  .navbar { flex-direction: row;}
+  
+  }
+    
