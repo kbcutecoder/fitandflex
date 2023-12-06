@@ -42,8 +42,19 @@
 
   .push{
     padding-top: 10px;
-  background-color: white;
-  width: 100%;
+    background-color: white;
+    width: 100%;
+ }
+
+ .push h3
+ {
+  padding: 20px 20px;
+ }
+ h3 i
+ {
+  padding-right: 20px;
+  font-size: 30px;
+  color: blue;
  }
 
  .goal{
@@ -171,7 +182,7 @@ body {
     font-size: 16px;
     background-color: white;
     font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     min-height: 100%;
     overflow-x: hidden;
   }
