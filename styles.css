@@ -28,7 +28,9 @@
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
+.col-3 {width: 25%;
+background-color: white;
+text-align: end;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
@@ -39,7 +41,17 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;
   }
+ .bh{
+  text-align: left;
+  padding-right: 50px;
+  padding-left: 200px;
+ }
 
+ .dk{
+  background-color: white;
+ 
+ }
+ 
   .push{
     padding-top: 10px;
     background-color: white;
@@ -61,12 +73,29 @@
   padding-top: 55px;
 background-color: white;
 width: 100%;
+border-radius: 5px;
 }
+ 
+
 
 .goal1{
-  padding-top: 60px;
+  padding-top: 30px;
 background-color: white;
 width: 100%;
+border-radius: 5px;
+}
+
+.goal2{
+  padding-top: 30px;
+  padding-bottom: 45px;
+background-color: white;
+width: 100%;
+border-radius: 5px;
+}
+.goal3{
+  display: flex;
+  justify-content: space-evenly;
+  
 }
 
  .push1{
@@ -76,6 +105,16 @@ width: 100%;
 }
 .free{
   padding-top: 50px;
+}
+
+.pc{
+  display: inline-block;
+  width: 25%;
+  background-color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 150px;
+  border-radius: 5px;
 }
 
 
@@ -259,6 +298,7 @@ h4
 h5
 { 
   font-size:18px;
+  text-align: left;
 }
 h5
 { 
