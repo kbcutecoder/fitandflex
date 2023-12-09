@@ -7,19 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/be91a42f50.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
  
 </head>
 <body>
+<img src="images/logo.png" class="logo">
+
 <div class="row fullheight">
   
   <div class="col-1 navbar fullheight">
     <a href="index.html"><i class="fa-solid fa-house"></i></a>
     <a href="goals.html"><i class="fa-solid fa-chart-pie"></i></a>
   </div>
-
   <div class="col-8 main fullheight">
     <div class="row">
       <div class="col-12">
+     
         <h1>WELCOME Micha,</h1>
       </div>
       <div class="col-6">
@@ -75,86 +81,33 @@
       <div class="col-4">Age<br>26 Yrs.</div>
     </div>
     <h2>Calender</h2>
-    <table bgcolor="lightgrey" align="center" 
-    cellspacing="7" cellpadding="7"> 
+    <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+      <i class="fa fa-calendar"></i>&nbsp;
+      <span></span> <i class="fa fa-caret-down"></i>
+  </div>
+  
+  <script type="text/javascript">
+  $(function() {
+  
+      var start = moment().subtract(29, 'days');
+      var end = moment();
+  
+      function cb(start, end) {
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+      }
+  
+      $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          autoApply: true,
+          "alwaysShowCalendars": true,
+      }, cb);
+  
+      cb(start, end);
 
-
-    <caption align="top"> 
-     
-    </caption> 
-
-    <thead> 
-        <tr> 
-            <!-- Here we have applied inline style  
-                 to make it more attractive-->
-            <th>Sun</th> 
-            <th>Mon</th> 
-            <th>Tue</th> 
-            <th>Wed</th> 
-            <th>Thu</th> 
-            <th>Fri</th> 
-            <th>sat</th> 
-        </tr> 
-    </thead> 
-      
-    <tbody> 
-        <tr> 
-            <td></td> 
-            <td></td> 
-            <td></td> 
-            <td></td> 
-            <td></td> 
-            <td>1</td> 
-            <td>2</td> 
-        </tr> 
-        <tr></tr> 
-        <tr> 
-            <td>3</td> 
-            <td>4</td> 
-            <td>5</td> 
-            <td>6</td> 
-            <td>7</td> 
-            <td>8</td> 
-            <td>9</td> 
-        </tr> 
-        <tr> 
-            <td>10</td> 
-            <td>11</td> 
-            <td>12</td> 
-            <td>13</td> 
-            <td>14</td> 
-            <td>15</td> 
-            <td>16</td> 
-        </tr> 
-        <tr> 
-            <td>17</td> 
-            <td>18</td> 
-            <td>19</td> 
-            <td>20</td> 
-            <td>21</td> 
-            <td>22</td> 
-            <td>23</td> 
-        </tr> 
-        <tr> 
-            <td>24</td> 
-            <td>25</td> 
-            <td>26</td> 
-            <td>27</td> 
-            <td>28</td> 
-            <td>29</td> 
-            <td>30</td> 
-        </tr> 
-        <tr> 
-            <td>31</td> 
-            <td>1</td> 
-            <td>2</td> 
-            <td>3</td> 
-            <td>4</td> 
-            <td>5</td> 
-            <td>6</td> 
-        </tr> 
-    </tbody> 
-</table> 
+  });
+  </script>
+    
     </div>
     <h4>Chat with Friends</h4>
     <button>Chat</button>

@@ -47,7 +47,13 @@ text-align: end;}
   padding-left: 200px;
   
  }
-
+ .logo {
+  position:absolute; 
+  left:0px; 
+  top:0px;
+  width: 110px;
+  padding:5px;
+ }
  .dk{
   background-color: white;
   justify-content: space-evenly;
